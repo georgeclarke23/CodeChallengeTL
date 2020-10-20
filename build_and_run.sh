@@ -32,5 +32,8 @@ sudo usermod -aG docker $(whoami)
 # log out
 exit
 
+
+
 # log back in
+cd CodeChallengeTL-master/
 make docker/compose
