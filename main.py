@@ -23,7 +23,7 @@ from app.actions.transform.aggregate_result import aggregate_results
 os.environ["PYSPARK_PYTHON"] = "/usr/bin/python3"
 
 MOVIES_DF = "movies"
-MOVIE_PATH = "datasets/movies/movies_metadata_sample.csv"
+MOVIE_PATH = "datasets/movies/movies_metadata.csv"
 MOVIE_COLUMNS = [
     "id",
     "original_title",
@@ -33,7 +33,7 @@ MOVIE_COLUMNS = [
     "production_companies",
 ]
 RATINGS_DF = "ratings"
-RATINGS_PATH = "datasets/movies/ratings_sample.csv"
+RATINGS_PATH = "datasets/movies/ratings.csv"
 
 
 MOVIE_RATINGS_DF = "MovieRatings"

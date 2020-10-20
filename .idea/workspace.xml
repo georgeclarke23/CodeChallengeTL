@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f670d97d-d614-4084-80bf-c64c8c31892c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entrypoint.sh" beforeDir="false" afterPath="$PROJECT_DIR$/entrypoint.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/movies/movies_metadata_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/movies/movies_metadata.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/movies/ratings_sample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/movies/ratings.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +198,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603229734259</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updating git ignore">
+      <created>1603231626843</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603231626843</updated>
+    </task>
+    <task id="LOCAL-00007" summary="update sample datasets">
+      <created>1603231706786</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603231706786</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +258,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updating git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating git ignore" />
+    <MESSAGE value="update sample datasets" />
+    <option name="LAST_COMMIT_MESSAGE" value="update sample datasets" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
