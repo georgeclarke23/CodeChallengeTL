@@ -1,7 +1,4 @@
-FROM amazonlinux:2
-
-# Linux Dependencies
-RUN yum install postgresql java-1.8.0-openjdk python3 python3-pip wget gnuzip build-essential which make -y
+FROM robertlgtucker/pyspark-java8:latest
 
 # Never prompts the user for choices on installation/configuration of packages
 ENV DEBIAN_FRONTEND noninteractive
