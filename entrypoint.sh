@@ -1,9 +1,8 @@
 #!/bin/sh
-RUN wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
-RUN gunzip enwiki-latest-abstract.xml.gz
+wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
+gunzip enwiki-latest-abstract.xml.gz
 cd /opt/etl/datasets
 mkdir wiki
-mkdir movies
 cd ..
 mv enwiki-latest-abstract.xml /opt/etl/datasets/wiki/
 export PYSPARK_DRIVER_PYTHON=$(which python3)
