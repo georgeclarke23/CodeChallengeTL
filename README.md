@@ -1,6 +1,6 @@
 # CodeChallenge True Layer
 
-###Tech
+### Tech
 This project is based on a code challenge given by True Layer.
 
 This project is dependent on:
@@ -61,4 +61,4 @@ make docker/compose
 
 
 ## Testing
-
+To check the data for correctness, I have been using test driven approach where I was downloading random samples of my data as CSV and examining trends through excel in my local computer environemnt.
