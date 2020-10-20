@@ -1,6 +1,4 @@
 #!/bin/sh
-wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
-gunzip enwiki-latest-abstract.xml.gz
 cd /opt/etl/datasets
 mkdir wiki
 cd ..

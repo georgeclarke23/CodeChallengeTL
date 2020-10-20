@@ -26,4 +26,7 @@ COPY datasets/movies /opt/etl/datasets/movies
 RUN mkdir -p /opt/etl/jars
 COPY jars /opt/etl/jars
 
+RUN wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
+RUN gunzip enwiki-latest-abstract.xml.gz
+
 ENTRYPOINT ["/opt/etl/entrypoint.sh"]

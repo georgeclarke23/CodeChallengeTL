@@ -11,7 +11,7 @@ This project is dependent on:
 
 
 ## Getting Started Running The Project
-If you have docker and pyspark already installed in an environment \, just clone the project and run the following command:
+If you have docker and pyspark already installed in an environment, just clone the project and run the following command:
 
 ```bash
 make docker/compose
@@ -63,6 +63,7 @@ cd CodeChallengeTL-master/
 # This command will start the docker containers on the EC2 instance
 make docker/compose
 ```
+## Query database
 
 
 
