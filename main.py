@@ -1,3 +1,7 @@
+# !/usr/bin/env python
+# coding: utf-8
+
+import os
 from app.config import Config
 from app.executors.executor import execute
 from app.executors.loop_executor import loop_execute
@@ -15,6 +19,8 @@ from app.actions.transform.calculate_score import calculate_jaccard_score
 from app.actions.load.open_postgress_session import open_postgress_session_with_password
 from app.actions.load.write_data_to_postgres import write_dataframe
 from app.actions.transform.aggregate_result import aggregate_results
+
+os.environ["PYSPARK_PYTHON"] = "/usr/bin/python3"
 
 MOVIES_DF = "movies"
 MOVIE_PATH = "datasets/movies/movies_metadata.csv"
