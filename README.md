@@ -11,6 +11,12 @@ This project is dependent on:
 
 
 ## Getting Started Running The Project
+If you have docker and pyspark already installed in an environment \, just clone the project and run the following command:
+
+```bash
+make docker/compose
+``` 
+#### or
 
 You will need to provision an EC2 instance that uses Ubuntu operating system, ssh into the EC2 instance and run the following commands: 
 ```bash
