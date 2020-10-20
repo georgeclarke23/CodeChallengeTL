@@ -1,6 +1,6 @@
 # CodeChallenge True Layer
 
-###Tech
+### Tech
 This project is based on a code challenge given by True Layer.
 
 This project is dependent on:
