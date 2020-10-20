@@ -1,4 +1,4 @@
-datasets/wiki
+datasets/
 .venv/
 tests/
 .idea/
