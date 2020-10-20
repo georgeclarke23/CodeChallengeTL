@@ -23,10 +23,10 @@ COPY entrypoint.sh /opt/etl/
 RUN chmod +x /opt/etl/entrypoint.sh
 COPY .env /opt/etl/
 
+RUN mkdir -p /opt/etl/datasets/movies
+COPY datasets/movies /opt/etl/datasets/movies
+
 RUN mkdir -p /opt/etl/jars
 COPY jars /opt/etl/jars
-
-
-
 
 ENTRYPOINT ["/opt/etl/entrypoint.sh"]
