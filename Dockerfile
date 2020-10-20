@@ -16,9 +16,6 @@ RUN python3 -m pip install -r /opt/etl/requirements.txt
 
 WORKDIR /opt/etl
 
-RUN wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
-RUN gunzip enwiki-latest-abstract.xml.gz
-
 COPY Makefile /opt/etl/
 COPY app /opt/etl/app/
 COPY main.py /opt/etl/
