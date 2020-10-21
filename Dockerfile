@@ -1,5 +1,13 @@
 FROM masroorhasan/pyspark
 
+RUN apt-get install -y \
+      apt-transport-https \
+      ca-certificates \
+      curl \
+      make \
+      unzip \
+      software-properties-common
+
 RUN mkdir -p /opt/etl/app
 
 COPY requirements.txt /opt/etl/
