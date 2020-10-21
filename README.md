@@ -20,8 +20,7 @@ If you have docker and pyspark already installed in an environment, just clone t
 make docker/compose
 ``` 
 #### or
-
-You will need to provision an EC2 instance that uses Ubuntu operating system, ssh into the EC2 instance and run the following commands: 
+You can  provision an EC2 instance that uses Ubuntu operating system, ssh into the EC2 instance and run the following commands: 
 ```bash
 sudo apt-get update
 
@@ -58,8 +57,7 @@ exit
 ```
 
 
-Once this is done, time to run the pyspark job and postgress database in a container
-
+Once this is done, time to run the pyspark job and postgress database in a container. SSH back into the EC2 instance and execute the following commands 
 ```bash
 cd CodeChallengeTL-master/
 
@@ -68,7 +66,12 @@ make docker/compose
 ```
 ## Query database
 
+To run a query on the database update `PGHOST` in `.env` file to the host of the postgress database. This can be either locally `localhost` or the public IP address of the EC2 instance. Execute the following commands:
 
+```bash
+make query q="SELECT * FROM films"
+```
+NOTE: This will save the query results to a file `results.csv`
 
 ## Testing
 To check the data for correctness, I have been using test driven approach where I was downloading random samples of my data as CSV and examining trends through excel in my local computer environemnt.

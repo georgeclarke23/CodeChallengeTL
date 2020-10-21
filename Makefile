@@ -19,3 +19,6 @@ run:
 
 docker/run:
 	tail -f /dev/null
+
+query:
+	python3 query.py "${q}"
