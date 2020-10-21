@@ -28,7 +28,7 @@ WORKDIR /opt/etl
 
 COPY Makefile /opt/etl/
 COPY app /opt/etl/app/
-COPY main.py /opt/etl/
+COPY *.py /opt/etl/
 COPY entrypoint.sh /opt/etl/
 RUN chmod +x /opt/etl/entrypoint.sh
 COPY .env /opt/etl/
