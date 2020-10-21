@@ -14,9 +14,9 @@ RUN \
 
 # Install PySpark and Numpy
 RUN \
-    pip install --upgrade pip && \
-    pip install numpy && \
-    pip install pyspark
+    pip3 install --upgrade pip3 && \
+    pip3 install numpy && \
+    pip3 install pyspark
 
 RUN apt-get update && apt-get install wget make sudo -y
 
@@ -25,7 +25,7 @@ RUN mkdir -p /opt/etl/app
 COPY requirements.txt /opt/etl/
 
 # Install python packages
-RUN pip install -r /opt/etl/requirements.txt
+RUN pip3 install -r /opt/etl/requirements.txt
 
 WORKDIR /opt/etl
 
