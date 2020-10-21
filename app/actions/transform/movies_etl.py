@@ -43,7 +43,6 @@ def movies_etl(df_name: str):
             .withColumn("title", trim(col("original_title")))
             .orderBy(col("ratio").desc())
             .drop_duplicates(subset=["id"])
-            .limit(1000)
         )
         config.info("MoviesETL", f"Schema: ")
         df.printSchema()

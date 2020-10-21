@@ -68,6 +68,18 @@ FINAL_DF_COLUMN = [
     "a.year_in_title",
 ]
 
+FINAL_COLUMN = [
+    "title",
+    "budget",
+    "year",
+    "revenue",
+    "ratio",
+    "production_companies",
+    "rating",
+    "abstract",
+    "url",
+]
+
 
 def main():
     # initialising Config
@@ -105,6 +117,7 @@ def main():
         ),
         execute(calculate_jaccard_score(FINAL_DF)),
         execute(aggregate_results(FINAL_DF)),
+        execute(select_columns(FINAL_DF, FINAL_COLUMN)),
         execute(write_dataframe(FINAL_DF)),
     ]
 

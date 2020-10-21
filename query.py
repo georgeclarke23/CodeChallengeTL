@@ -6,7 +6,7 @@ import pandas as pd
 
 def main():
     if len(sys.argv) <= 0:
-        print(f'{len(sys.argv)} {sys.argv[1]}')
+        print(f"{len(sys.argv)} {sys.argv[1]}")
         raise Exception(f"Need to provide a query")
 
     user = os.environ["POSTGRESS_USERNAME"]

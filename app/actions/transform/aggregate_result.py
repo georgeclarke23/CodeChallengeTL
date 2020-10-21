@@ -6,8 +6,10 @@ def aggregate_results(df_key: str):
         df = config.get_dataframe(df_key)
         config.info("AggregateResults", "Aggregating results started")
 
-        df = df.orderBy(["title", "jaccard_score"], ascending=False).drop_duplicates(
-            subset=["title"]
+        df = (
+            df.orderBy(["title", "jaccard_score"], ascending=False)
+            .drop_duplicates(subset=["title"])
+            .limit(1000)
         )
 
         # Store dataframe to config
