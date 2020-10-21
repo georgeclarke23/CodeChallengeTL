@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-LABEL maintainer="masroorh"
 
 # Install OpenJDK 8
 RUN \
