@@ -10,8 +10,18 @@ This project is dependent on:
 
 Note: The datasets had to be scaled down for storage purposes, you can replace the datasets with the complete datasets. The movie and rating datasets were randomly sampled. 
 
+##  Challenges and Choices
+- I have chosen to run my script on the top of Apache Spark framework as it uses the full multiple VCPU efficiently and it fully supports reading large structured xmls through [spark-xml](https://github.com/databricks/spark-xml).
+- Spark dataframe supports numerical, long list of functions and string regex operations on columns.
+
+- Pyspark and Postgres require a long setup process that is OS type and version dependant.  I have used [official postgres docker container](https://hub.docker.com/_/postgres) and for Pyspark I have built a reproducable docker from unix container setup process.
+- I have pulled the docker container for an OS independent reliable deployment and all shell scripts are minimal to make the project transferrable to other OSs.
+ 
 ## Algorithm choice 
-Jaccard Index
+The Jaccard Index, also known as the Jaccard similarity coefficient, is a statistic used in understanding the similarities between sample sets. The measurement emphasizes similarity between finite sample sets, and is formally defined as the size of the intersection divided by the size of the union of the sample sets.
+
+For each movie, there was multiple matches to wiki abstracts. To decipher which match was the closets, I used the jaccard index to calculate  a score and the match with the highest score was selected. 
+
 
 ## Getting Started Running The Project
 If you have docker and pyspark already installed in an environment, just clone the project and run the following command:
