@@ -24,9 +24,11 @@ For each movie, there was multiple matches to wiki abstracts. To decipher which 
 
 
 ## Getting Started Running The Project
-If you have docker and pyspark already installed in an environment, just clone the project and run the following command:
+If you have docker and python  already installed in an environment, just clone the project and run the following command:
 
 ```bash
+make venv 
+. .venv/bin/activate
 make docker/compose
 ``` 
 #### or
@@ -41,6 +43,7 @@ sudo apt-get install -y \
     curl \
     make \
     unzip \
+    python3-pip \
     software-properties-common
 
 # Download the code into the instance and unzip it.
@@ -70,6 +73,9 @@ exit
 Once this is done, time to run the pyspark job and postgress database in a container. SSH back into the EC2 instance and execute the following commands 
 ```bash
 cd CodeChallengeTL-master/
+
+# install python requirements.
+pip3 install -r requirements.txt
 
 # This command will start the docker containers on the EC2 instance
 make docker/compose
