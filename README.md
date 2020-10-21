@@ -8,7 +8,10 @@ This project is dependent on:
 - Docker - Docker is a tool designed to make it easier to create, deploy, and run applications by using containers.
 - Postgresql - An RDBMS database and was required in the project brief.
 
+Note: The datasets had to be scaled down for storage purposes, you can replace the datasets with the complete datasets. The movie and rating datasets were randomly sampled. 
 
+## Algorithm choice 
+Jaccard Index
 
 ## Getting Started Running The Project
 If you have docker and pyspark already installed in an environment, just clone the project and run the following command:

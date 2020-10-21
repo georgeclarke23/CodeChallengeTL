@@ -1,15 +1,11 @@
-FROM robertlgtucker/pyspark-java8:latest
-
-# Never prompts the user for choices on installation/configuration of packages
-ENV DEBIAN_FRONTEND noninteractive
-ENV TERM linux
+FROM masroorhasan/pyspark
 
 RUN mkdir -p /opt/etl/app
 
 COPY requirements.txt /opt/etl/
 
 # Install python packages
-RUN python3 -m pip install -r /opt/etl/requirements.txt
+RUN pip install -r /opt/etl/requirements.txt
 
 WORKDIR /opt/etl
 
@@ -25,8 +21,5 @@ COPY datasets/movies /opt/etl/datasets/movies
 
 RUN mkdir -p /opt/etl/jars
 COPY jars /opt/etl/jars
-
-RUN wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-abstract.xml.gz
-RUN gunzip enwiki-latest-abstract.xml.gz
 
 ENTRYPOINT ["/opt/etl/entrypoint.sh"]
