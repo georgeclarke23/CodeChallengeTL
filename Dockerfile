@@ -13,10 +13,7 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 # Install PySpark and Numpy
-RUN \
-    pip3 install --upgrade pip3 && \
-    pip3 install numpy && \
-    pip3 install pyspark
+RUN pip3 install pyspark
 
 RUN apt-get update && apt-get install wget make sudo -y
 
