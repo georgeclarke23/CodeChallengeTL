@@ -1,12 +1,6 @@
 FROM masroorhasan/pyspark
 
-RUN apt-get install -y \
-      apt-transport-https \
-      ca-certificates \
-      curl \
-      make \
-      unzip \
-      software-properties-common
+RUN apt-get update && apt-get install wget make sudo -y
 
 RUN mkdir -p /opt/etl/app
 
